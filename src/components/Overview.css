@@ -1,0 +1,115 @@
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.overview header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.9rem;
+}
+
+.overview header p {
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 760px;
+}
+
+.level-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.level-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.level-card h3 {
+  margin: 0;
+}
+
+.level-card .tagline {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.level-card dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin: 0.3rem 0 0;
+}
+
+.level-card dt {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.level-card dd {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.level-card .explore {
+  margin-top: auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.comparison h3 {
+  margin-bottom: 0.8rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead th {
+  text-align: left;
+  background: var(--panel-bg);
+  padding: 0.7rem 0.9rem;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}

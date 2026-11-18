@@ -1,0 +1,150 @@
+.quiz {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.quiz-progress {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.quiz h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.option {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: translateX(2px);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.option-correct {
+  border-color: #3fb27f;
+  background: rgba(63, 178, 127, 0.15);
+}
+
+.option-incorrect {
+  border-color: var(--danger);
+  background: rgba(214, 69, 69, 0.15);
+}
+
+.explanation {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: fade-up 0.3s ease;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.explanation.good {
+  border-color: #3fb27f;
+}
+
+.explanation.bad {
+  border-color: var(--danger);
+}
+
+.explanation p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.explanation button,
+.quiz-results button {
+  align-self: flex-start;
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quiz-results {
+  text-align: left;
+}
+
+.score {
+  font-size: 1.1rem;
+}
+
+.verdict {
+  color: var(--text-muted);
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.review-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.review-list li.incorrect {
+  color: var(--danger);
+}

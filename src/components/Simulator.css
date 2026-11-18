@@ -1,0 +1,93 @@
+.simulator {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+}
+
+.status-banner strong {
+  font-size: 0.95rem;
+}
+
+.status-banner span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.status-healthy {
+  border-color: #3fb27f;
+}
+
+.status-healthy strong {
+  color: #237a52;
+}
+
+.status-degraded {
+  border-color: #e0a63f;
+}
+
+.status-degraded strong {
+  color: #a3680b;
+}
+
+.status-lost {
+  border-color: var(--danger);
+}
+
+.status-lost strong {
+  color: var(--danger);
+}
+
+.simulator-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.buttons button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.buttons button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
